@@ -1,0 +1,64 @@
+<html>
+<body>
+
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th>
+				<span class="custom-checkbox">
+					<input type="checkbox" id="selectAll">
+					<label for="selectAll"></label>
+				</span>
+			</th>
+			<th>ID</th>
+			<th>Last Name</th>
+			<th>First Name</th>
+			<th>Title</th>
+			<th>Supervisor</th>
+			<th>Birth Date</th>
+			<th>Joining Date</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Country</th>
+			<th>Postal Code</th>
+			<th>Phone</th>
+			<th>Fax</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for item in data %}
+		<tr>
+			<td>
+				<span class="custom-checkbox">
+					<input type="checkbox" id="checkbox1" name="options[]" value="1">
+					<label for="checkbox1"></label>
+				</span>
+			</td>
+			<td>{{item[0]}}</td>
+			<td>{{item[1]}}</td>
+			<td>{{item[2]}}</td>
+			<td>{{item[3]}}</td>
+			<td>{{item[4]}}</td>
+			<td>{{item[5]}}</td>
+			<td>{{item[6]}}</td>
+			<td>{{item[7]}}</td>
+			<td>{{item[8]}}</td>
+			<td>{{item[9]}}</td>
+			<td>{{item[10]}}</td>
+			<td>{{item[11]}}</td>
+			<td>{{item[12]}}</td>
+			<td>{{item[13]}}</td>
+			<td>{{item[14]}}</td>
+			<td>{{item[15]}}</td>
+			<td>
+				<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+				<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+			</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+</body>
+</html>
